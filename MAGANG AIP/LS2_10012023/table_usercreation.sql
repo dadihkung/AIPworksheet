@@ -1,0 +1,1 @@
+DELETE FROM tabel_usercreation WHERE id = 987651

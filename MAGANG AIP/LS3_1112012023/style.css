@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'StretchPro';
+    src: url(StretchPro.otf);
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url("../LS3_1112012023/image/picture1.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mb-1-nama, .mb-none-username, .container-ld, .password, .konpass {
+    color: white;
+  }
+
+.register {
+    font-family: 'StretchPro';
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.line-or {
+    margin-left: 54px; 
+}
+
+.link {
+  text-align: center;
+}

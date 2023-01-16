@@ -1,0 +1,12 @@
+ Mohon di perikasa terlebih dahulu.
+ 
+error_log()
+ 
+
+	"input":
+	{
+		"prefix": "input-1",
+		"body": "<label for="">Password :</label>
+        		<input type="" name="" id="">"
+	}
+ 

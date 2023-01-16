@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserCreartion.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+</head>
+<body>
+    <div class="continer-ld col-md-6 mx-auto shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="height: 600px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    
+        <div class="content-newuser" style="margin-top: 50px;" >
+            <h1 style="text-align: center; font-size: 60px;">Add New User</h1>
+    
+            <!-- ini buat input nama depan - usercreative-->
+            <div class="container">
+                <div class="row row-cols-2">
+                  <div class="col">
+                    <p class="mb-none">Nama Depan :</p>
+                    <input type="text" class="form-control" id="nama-dpn" style="border-radius: 15px;">
+                    <div id="nama-dpn-text" class="form-text">Enter your first name in here yah...</div>
+                  </div>
+            <!-- ini buat input nama belakang - usercreative-->
+                  <div class="col">
+                    <p class="mb-none">Nama Belakang :</p>
+                    <input type="text" class="form-control" id="nama-blkng" style="border-radius: 15px;">
+                    <div id="nama-blkng-text" class="form-text">Enter your last name in here yah...</div>
+                  </div>
+                </div>
+            </div>
+    
+    
+            <div class="container-ld mt-3" style="margin: 0px 10px 0px 10px;">
+                <div class="col-sm">
+                    <p class="mb-none">Email :</p>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="height: 60px; border-radius: 15px;">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+            </div>
+    
+            <!-- ini buat checkbox - usercreative -->
+            <div class="container mb-3 mt-4">
+                <div>
+                    Kelamin :
+                    <input class="form-check-input mt-1 " type="checkbox" value="" aria-label="Checkbox for following text input" style="width: 20px; height: 20px;">
+                    <h7>Laki-Laki</h7>
+                    <input class="form-check-input mt-1" type="checkbox" value="" aria-label="Checkbox for following text input" style="width: 20px; height: 20px;">
+                    <h7>Perempuan</h7>
+                </div>
+            </div>
+    
+            <!-- ini buat button save - usercreative-->
+            <div class="button-save mt-4">
+                <button type="button" style="width: 100px; background-color: gray; color: black; border-color: grey;" class="btn btn-primary active/.,mb-3" data-bs-toggle="button" aria-pressed="true">Save</button>
+
+            <!-- ini buat button save - usercreative-->
+                <button type="button" style="width: 100px; background-color: black; color: gray; border-color: black;" class="btn btn-primary active/.,mb-3" data-bs-toggle="button" aria-pressed="true">Cancel</button>
+            </div>
+    </div>
+        
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
