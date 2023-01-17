@@ -36,32 +36,46 @@
         <th scope="col">nama_pegawai</th>
         <th scope="col">nama_pegawai</th>
         <th scope="col">jumlah_pendapatan</th>
+        <th scope="col">keterangan</th>
         </tr>
     </thead>
     <?php
-        // ambil table dan coloumn dari data base = array 1
-        $sql = "SELECT nama_pegawai, nama_bidang, SUM(pendapatan) AS jumlah_pendapatan
-        FROM master_bidang
-        INNER JOIN master_pegawai
-        ON master_bidang.id = master_pegawai.id
-        INNER JOIN master_pendapatan
-        ON master_pegawai.id = master_pendapatan.id_pegawai
-		GROUP BY master_pendapatan.id_pegawai";
+            // ambil table dan coloumn dari data base = array 1
+            $sql = "SELECT nama_pegawai, nama_bidang, SUM(pendapatan) AS jumlah_pendapatan
+            FROM master_bidang
+            INNER JOIN master_pegawai
+            ON master_bidang.id = master_pegawai.id
+            INNER JOIN master_pendapatan
+            ON master_pegawai.id = master_pendapatan.id_pegawai
+            GROUP BY master_pendapatan.id_pegawai";
 
-    $no = 1;
-    //
-        $call = mysqli_query($coinn, $sql);
-        while($m = mysqli_fetch_array($call)) {
-        $nama_pegawai = $m['nama_pegawai'];
-        $nama_bidang = $m['nama_bidang'];
-        $total_pendapatan = $m['jumlah_pendapatan'];
+        $no = 1;
+        //
+            $call = mysqli_query($coinn, $sql);
+            while($m = mysqli_fetch_array($call)) {
+            $nama_pegawai = $m['nama_pegawai'];
+            $nama_bidang = $m['nama_bidang'];
+            $total_pendapatan = $m['jumlah_pendapatan'];
+            $keterangan = $total_pendapatan; 
+            if ($total_pendapatan < "50000") {
+                $keterangan = "kureng banget";
+                $color = "style='background-color: red;'";
+              } elseif ($total_pendapatan < "100000") {
+                $keterangan = "standard lah ya";
+                $color = "style='background-color: blue;'";
+              } else {
+                $keterangan = "melebihi target";
+                $color = "style='background-color: green;'";
+              }
     ?>
-    <tbody>
+
+    <tbody <?= $color ?>>
         <tr>
-            <th scope="row"><?php echo $no; ?></th>
+            <th scope="row"><?php echo $no;?></th>
             <td><?= $nama_pegawai;?></td>
             <td><?= $nama_bidang;?></td>
             <td><?= $total_pendapatan;?></td>
+            <td><?= $keterangan;?></td>
         </tr>
         
     </tbody>
